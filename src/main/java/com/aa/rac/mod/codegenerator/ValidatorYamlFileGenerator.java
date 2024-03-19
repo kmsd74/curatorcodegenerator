@@ -175,19 +175,19 @@ public class ValidatorYamlFileGenerator {
       if(counter < lastIndex)
       {
       lines.add("    "+field + ": {"
-          + "datatype: " + db2ToPgdataTypeMap.get(dataType)+ (value.lastIndexOf("(")==-1 || value.toLowerCase().startsWith("timest")?"":value.substring(value.lastIndexOf("("))) + ", trimmable: " + trimmable + ", nullable:" +nullable +"},\n");
+          + "datatype: " + db2ToPgdataTypeMap.get(dataType)+ (value.lastIndexOf("(")==-1 || value.toLowerCase().startsWith("timest")?"":value.substring(value.lastIndexOf("("))) + ", trimmable: " + trimmable + ", nullable: " +nullable +"},\n");
       }
       else
       {
         lines.add("    "+field + ": {"
-          + "datatype: " + db2ToPgdataTypeMap.get(dataType)+ (value.lastIndexOf("(")==-1 || value.toLowerCase().startsWith("timest")?"":value.substring(value.lastIndexOf("("))) + ", trimmable: " + trimmable + ", nullable:" +nullable +"} \n }");
+          + "datatype: " + db2ToPgdataTypeMap.get(dataType)+ (value.lastIndexOf("(")==-1 || value.toLowerCase().startsWith("timest")?"":value.substring(value.lastIndexOf("("))) + ", trimmable: " + trimmable + ", nullable: " +nullable +"} \n }");
       }
         }
 
   }
 
   public void generateValidatorYamlFile() throws IOException {
-    String validatorFileName = "application-" + tableName + ".yaml";
+    String validatorFileName = "application-" + fileName + ".yml";
     Set<String> fieldNames = getFieldNames(String.join("", FileUtil.readLinesFromFile(filePath)));
     String fullPath = getFullValidatordFilePath(validatorFileName);
     FileUtil.createFile(getValidatorDirectory(), fullPath);
