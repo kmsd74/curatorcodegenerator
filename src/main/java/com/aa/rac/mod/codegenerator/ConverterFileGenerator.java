@@ -14,7 +14,7 @@ public class ConverterFileGenerator {
 
   private static final String pwd = System.getProperty("user.dir").replace('\\', '/');
 
-  private static final String replSourcePath = "./src/main/java/com/aa/rac/mod/domain/converter/";
+  private static final String replSourcePath = "./generated/src/main/java/com/aa/rac/mod/domain/converter/";
 
   private static final String packageName = "com.aa.rac.mod.domain.converter.";
 

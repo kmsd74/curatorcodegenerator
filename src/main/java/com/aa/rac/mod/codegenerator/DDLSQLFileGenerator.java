@@ -17,7 +17,7 @@ public class DDLSQLFileGenerator {
   private int fieldDataTypeGapLength = 30;
   private static final String pwd = System.getProperty("user.dir").replace('\\', '/');
 
-  private static final String replSourcePath = "./src/test/resources/";
+  private static final String replSourcePath = "./generated/src/test/resources/";
 
   public String tableName;
 

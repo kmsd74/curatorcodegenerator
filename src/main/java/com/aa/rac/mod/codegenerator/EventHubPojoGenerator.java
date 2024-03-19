@@ -17,7 +17,7 @@ public class EventHubPojoGenerator {
 
   private static final String pwd = System.getProperty("user.dir").replace('\\', '/');
 
-  private static final String ehSourcePath = "./src/main/java/com/aa/rac/mod/repository/eventhub/";
+  private static final String ehSourcePath = "./generated/src/main/java/com/aa/rac/mod/repository/eventhub/";
 
   private static final String packageName = "com.aa.rac.mod.repository.eventhub";
 
